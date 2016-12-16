@@ -16,11 +16,23 @@ a {
   text-decoration: none;
 }
 
+/* make the images responsive due to webpage if it changes size*/
+img {
+  max-width: 100%; /* images to fill their parent element */
+}
+
 
 
 /*******************************
 HEADING
 ********************************/
+
+header {
+  float: left; /* use for desktop layout */
+  margin: 0 0 30px 0;
+  padding: 5px 0 0 0;
+  width: 100%;
+}
 
 #logo {
   text-align: center;
@@ -53,6 +65,22 @@ nav {
   margin: 20px 0 0;
 }
 
+nav ul {
+  list-style: none;
+  margin: 0 10px;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+}
+
+/* style the anchors in nav */
+nav a {
+  font-weight: 800;
+  padding: 15px 10px;
+}
+
 
 
 /*******************************
@@ -62,10 +90,45 @@ FOOTER
 footer {
   font-size: 0.75em;
   text-align: center;
+  clear: both; /* clear of any influences of the other floats */
   padding-top: 50px;
   color: #ccc;
 }
 
+.social-icon {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+}
+
+
+
+/*******************************
+PAGE: PORTFOLIO
+********************************/
+
+#gallery {
+  margin: 0;
+  padding: 0;
+  list-style: none; /* removes any bullet points if set to none */
+}
+
+/* style the list items */
+#gallery li {
+  float: left;
+  width: 45%;
+  margin: 2.5%;
+  background-color: #f5f5f5;
+  color: #bdc3c7;
+}
+
+/* style the paragraphs in the list items */
+#gallery li a p {
+  margin: 0;
+  padding: 5%;
+  font-size: 0.75em;
+  color: #bdc3c7;
+}
 
 
 /*******************************
