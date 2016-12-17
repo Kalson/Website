@@ -16,7 +16,8 @@ a {
   text-decoration: none;
 }
 
-/* make the images responsive due to webpage if it changes size*/
+/* make the images responsive due to webpage if it changes size
+It's called Fluid Imaging */
 img {
   max-width: 100%; /* images to fill their parent element */
 }

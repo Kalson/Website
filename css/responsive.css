@@ -1,0 +1,94 @@
+/* each media query rule, we'll write additional CSS that will only be added if
+the conditions of our media query are true */
+
+/* telling the browser that we want to target digital screens with a min-width
+of 480px as opposed to print media (for larger than your avg smart phone)*/
+@media screen and (min-width: 480px) {
+/* b/c of "and" both of these need to be true in order for this css we're added
+to be added to our page */
+
+/*******************************
+TWO COLUMN LAYOUT
+********************************/
+
+  #primary {
+    width: 50%;
+    float: left;
+  }
+
+  #secondary {
+    width: 40%;
+    float: right; /* floating to the right for rare browser issues */
+  }
+
+/*******************************
+want 3 elements side by side, so total width of each element * 3
+and each item has margin of 2.5 on all sides, so the left and right (2.5 + 2.5)
+So we're up to 15% so far for our margins. Everything else needs to be space
+that's actually taken up by the images So that's 100% of the space minus 15% of
+the space, which is just taken up by margins
+3 * 5 = 15
+100% - 15% = 85% / 3 columns = 28.333333 width
+********************************/
+
+/*******************************
+PAGE: PORTFOLIO
+********************************/
+
+  #gallery li {
+    width: 28.3333%;
+  }
+
+  /* any of the style on #gallery li to apply on every 4 item */
+  #gallery li:nth-child(4n) {
+    clear: left;
+  }
+
+/*******************************
+PAGE: ABOUT
+********************************/
+
+  .profile-photo {
+    float: left;
+    margin:  0 5% 80px 0;
+  }
+
+}
+
+/*for large tablets and destops */
+@media screen and (min-width: 660px) {
+
+/*******************************
+HEADER
+********************************/
+
+nav {
+  background: none;
+  float: right;
+  font-size: 1.125em;
+  margin-right: 5%;
+  width: 45%;
+}
+
+#logo {
+  float: left;
+  margin-left: 5%;
+  text-align: left;
+  width: 45%;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 0.825em;
+  margin-bottom: 20px;
+}
+
+header {
+  border-bottom: 5px solid #599a68; /* 5px for width, solid for style */
+  margin-bottom: 60px;
+}
+
+}
